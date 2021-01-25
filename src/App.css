@@ -1,38 +1,54 @@
-.App {
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-weight: normal;
+  font-family: 'Arial', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
   text-align: center;
+  background: linear-gradient(45deg, #250068, #5294b6);
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: rgba(255, 255, 255, .9);
+  margin: 10px 0 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  color: red;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.leaflet-container {
+  height: 500px;
+  width: 400px;
+  border-radius: 1%;
+}
+
+.console {
+  width:  400px;
+  height: auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  margin: 5vh auto;
+  background-color: rgba(0, 0, 0, .7);
+  box-shadow: 4px 8px 10px rgba(0, 0, 0, .3);
+  border-radius: 1%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 400px) {
+  .leaflet-container {
+    height: 100vh;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .console {
+    margin: 0 auto;
+    width: 100%;
   }
 }
